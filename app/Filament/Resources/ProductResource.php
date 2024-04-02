@@ -49,8 +49,29 @@ class ProductResource extends Resource
 
                     TranslatableTabs::make('Heading')
                         ->localeTabSchema(fn (TranslatableTab $tab) => [
+                            /*
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            TextInput::make('dummy input for tab '.$tab->getLocale()),
+                            /**/
+
                             Repeater::make('size_table')
-                                ->label('Sizes')
+                                ->label('Sizes '.$tab->getLocale())
+                                // ->visible(false)
                                 ->columns(static::SIZE_CHART_COLUMNS)
                                 ->defaultItems(1)
                                 ->minItems(1)
